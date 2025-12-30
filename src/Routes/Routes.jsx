@@ -16,6 +16,7 @@ import Home from '../pages/Home/Home';
   children:[
     {
       index: true,
+      loader:()=>fetch('https://raw.githubusercontent.com/ProgrammingHero1/B11-boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json').then(res=>res.json()),
       path:"/",
     Component:Home,
     }

@@ -1,21 +1,17 @@
-import React, { useEffect, useState } from 'react';
+
+
+
+import { useLoaderData } from 'react-router';
 import Banner from '../../components/Banner/Banner';
 import Books from '../Books/Books';
 
 const Home = () => {
-   const [allbooks, setAllBooks]= useState([]);
-
-   useEffect(()=>{
-    fetch('https://raw.githubusercontent.com/ProgrammingHero1/B11-boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json')
-    .then(res=>res.json())
-    .then(data =>{
-        console.log(data)
-    })
-   },[])
+   const data = useLoaderData();
+//    console.log("data"+data);
     return (
         <div>
            <Banner></Banner>
-           <Books></Books>
+           <Books data={data}></Books>
         </div>
     );
 };
