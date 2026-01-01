@@ -4,6 +4,8 @@ import { createBrowserRouter } from "react-router";
 import Root from '../pages/Root/Root';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Home from '../pages/Home/Home';
+import About from '../pages/About/About';
+import BookDetails from '../pages/BookDetails/BookDetails';
 
 
 
@@ -19,6 +21,14 @@ import Home from '../pages/Home/Home';
       loader:()=>fetch('https://raw.githubusercontent.com/ProgrammingHero1/B11-boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json').then(res=>res.json()),
       path:"/",
     Component:Home,
+    },
+    {
+      path:'/about',
+      Component:About
+    },
+    {
+      path:'/bookDetails/:id',
+      Component: BookDetails
     }
   ]
   },
