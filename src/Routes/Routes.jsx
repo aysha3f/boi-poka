@@ -28,6 +28,7 @@ import BookDetails from '../pages/BookDetails/BookDetails';
     },
     {
       path:'/bookDetails/:id',
+       loader:()=>fetch('https://raw.githubusercontent.com/ProgrammingHero1/B11-boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json').then(res=>res.json()),
       Component: BookDetails
     }
   ]
