@@ -6,6 +6,7 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Home from '../pages/Home/Home';
 import About from '../pages/About/About';
 import BookDetails from '../pages/BookDetails/BookDetails';
+import ReadList from '../pages/ReadList/ReadList';
 
 
 
@@ -25,6 +26,11 @@ import BookDetails from '../pages/BookDetails/BookDetails';
     {
       path:'/about',
       Component:About
+    },
+    {
+      path:'readList',
+       loader:()=>fetch('https://raw.githubusercontent.com/ProgrammingHero1/B11-boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json').then(res=>res.json()),
+      Component:ReadList
     },
     {
       path:'/bookDetails/:id',
