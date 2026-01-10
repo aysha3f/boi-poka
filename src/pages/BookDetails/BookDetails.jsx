@@ -26,7 +26,7 @@ const handleMarkAsRead = id=>{
 //   icon: "success"
 // });
 
- toast("Wow so easy!")
+
     addToStoredDB(id)
 }
 
@@ -34,7 +34,7 @@ const handleMarkAsRead = id=>{
         <div className='w-2/3 mx-auto'>
       <img className='w-48' src={image} alt="" />
       <h5>{bookName}</h5>
- <ToastContainer />
+
       <button onClick={() => handleMarkAsRead(id)} className="btn btn-accent m-2">Mark as Read</button>
 <button className="btn btn-info m-2">Add To WishList</button>
         </div>
